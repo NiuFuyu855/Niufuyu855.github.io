@@ -1,0 +1,209 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="Shortcut Icon" href="https://dh.niufuyu.top/wp-content/uploads/2022/04/logo-dark_collapsed@2x.png"/>
+		<meta charset="utf-8"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0"/>
+		<meta name="robots" content="all">
+		<meta name="referrer" content="always">
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="Cache-Control" content="no-transform" />
+		<meta name="format-detection" content="telephone=no"/>
+		<title>中国亲戚关系计算器</title>
+		<link rel="stylesheet" href="style/index.css">
+		<script type="text/javascript">
+		</script>
+	</head>
+	<body>
+		<div class="wrapper">
+			<div class="container">
+				<div class="inner">
+					<div class="mod-panel">
+						<div class="hd">
+							<h1>中国亲戚关系计算器</h1>
+							<p>逢年过节遇到三姑六婆，拒绝叫不出口的尴尬！轻松搞定亲戚关系～</p>
+							<p>当前亲戚称呼大全已收录约<b id="count">-</b>条亲戚关系</p>
+                                                        <p><a href='table.html'>亲戚关系图表</a></p>
+						</div>
+						<div class="bd">
+							<div class="c-hd">
+								<ul>
+									<li class="active"><a href="javascript:;" rel="nofollow">通过关系找称呼</a></li>
+									<li><a href="javascript:;" rel="nofollow">通过称呼找关系</a></li>
+									<li><a href="javascript:;" rel="nofollow">任意两者间称呼</a></li>
+								</ul>
+							</div>
+							<div class="c-bd">
+							    <div class="c-panel" style="display:block;">
+									<div class="row">
+										<div class="field">
+											区域模式：
+											<label for="field-0-1">
+												<input id="field-0-1" type="radio" name="mode" value="default" checked>
+												<span>默认</span>
+											</label>
+											<label for="field-0-2">
+												<input id="field-0-2" type="radio" name="mode" value="cantonese">
+												<span>粤语惯用</span>
+											</label>
+										</div>
+										<div class="field">
+											我的性别：
+											<label for="field-1-1">
+												<input id="field-1-1" type="radio" name="sex" value="1" checked="checked">
+												<span>男</span>
+											</label>
+											<label for="field-1-2">
+												<input id="field-1-2" type="radio" name="sex" value="0">
+												<span>女</span>
+											</label>
+										</div>
+										<div class="field">
+											称呼方式：
+											<label for="field-2-1">
+												<input id="field-2-1" type="radio" name="reverse" value="0" checked>
+												<span>我称呼对方</span>
+											</label>
+											<label for="field-2-2">
+												<input id="field-2-2" type="radio" name="reverse" value="1">
+												<span>对方称呼我</span>
+											</label>
+										</div>
+									</div>
+									<div class="row">
+										<textarea name="input" placeholder="称呼之间用'的'字分开…"></textarea>
+									</div>
+									<div class="operation">
+										<div class="row">
+											<p>
+												<span>
+													<button class="btn btn-small" data-value="爸爸">父</button>
+													<button class="btn btn-small" data-value="妈妈">母</button>
+												</span>
+												<span>
+													<button class="btn btn-small" data-value="老公">夫</button>
+													<button class="btn btn-small" data-value="老婆">妻</button>
+												</span>
+												<span>
+													<button class="btn btn-small" data-value="哥哥">兄</button>
+													<button class="btn btn-small" data-value="弟弟">弟</button>
+												</span>
+												<span>
+													<button class="btn btn-small" data-value="姐姐">姐</button>
+													<button class="btn btn-small" data-value="妹妹">妹</button>
+												</span>
+												<span>
+													<button class="btn btn-small" data-value="儿子">子</button>
+													<button class="btn btn-small" data-value="女儿">女</button>
+												</span>
+											</p>
+										</div>
+										<div class="row">
+											<button class="btn btn-3  btn-orange">回退</button>
+											<button class="btn btn-3  btn-red">清空</button>
+											<button class="btn btn-3 btn-green">计算</button>
+										</div>
+									</div>
+									<div class="row">
+										<p>计算结果：</p>
+										<p><textarea name="result" readonly></textarea></p>
+									</div>
+									<div class="intro">
+										<h3>使用案例</h3>
+										<p class="q">1. 使用别称查询：</p>
+										<p class="a">姥姥的爸爸的老窦 / 娘子的爹地的母亲 / 岳丈的妈咪 </p>
+										<p class="q">2. 使用合称查询：</p>
+										<p class="a">舅舅的孙辈 / 爸爸的祖父母 / 姑妈的兄弟姐妹 / 表姐妹的孩子</p>
+										<p class="q">3. 大小数字混合查询：</p>
+										<p class="a">儿子的大舅的二姑妈的七舅姥爷 / 女婿的小姨</p>
+										<p class="q">4. 不限制方向祖辈孙辈跨度，反复查询：</p>
+										<p class="a">舅妈的婆婆的外甥的姨妈的侄子的爷爷 / 老公的丈母娘的儿媳</p>
+										<p class="q">5. 年龄推导：</p>
+										<p class="a">哥哥的表姐 = 姑表姐、舅表姐</p>
+										<p class="a">堂妹的姐姐 = 堂姐、堂妹</p>
+										<p class="a">弟弟的表哥 = 姑表兄弟、舅表兄弟</p>
+										<p class="q">6. 根据语境确认性别：</p>
+										<p class="a">老婆的女儿的外婆 = 岳母</p>
+										<p class="a">爱人的婆婆的儿子 = 兄弟</p>
+									</div>
+								</div>
+								<div class="c-panel">
+									<div class="row">
+										<div class="field">
+											输入称呼：
+											<input class="input-text" type="text" name="input" placeholder="输入要查询的称呼"/>
+										</div>
+									</div>
+									<div class="operation">
+										<div class="row">
+											<button class="btn btn-red">清空</button>
+											<button class="btn btn-green">计算</button>
+										</div>
+									</div>
+									<div class="row">
+										<p>计算结果：</p>
+										<p><textarea name="result" readonly></textarea></p>
+									</div>
+									<div class="intro">
+										<h3>应用场景</h3>
+										<p class="q">“七舅姥爷”和我是什么关系？</p>
+										<p class="q">“堂弟”和“表弟”如何区分在？</p>
+										<p class="q">“外甥”和“侄子”的区别在哪里？</p>
+										<p class="q">“姑表舅表哥”是我的谁？</p>
+									</div>
+								</div>
+								<div class="c-panel">
+									<div class="row">
+										<div class="field">
+											<input class="input-text" type="text" name="person" placeholder="输入要查询的称呼"/>
+										</div>
+									</div>
+									<div class="row">
+										<div class="field">
+											称呼方式：
+											<label for="field-3-1">
+												<input id="field-3-1" type="radio" name="reverse2" value="1" checked>
+												<span>前者称呼后者</span>
+											</label>
+											<label for="field-3-2">
+												<input id="field-3-2" type="radio" name="reverse2" value="0">
+												<span>后者称呼前者</span>
+											</label>
+										</div>
+									</div>
+									<div class="row">
+										<div class="field">
+											<input class="input-text" type="text" name="target" placeholder="输入要查询的称呼"/>
+										</div>
+									</div>
+									<div class="operation">
+										<div class="row">
+											<button class="btn btn-red">清空</button>
+											<button class="btn btn-green">计算</button>
+										</div>
+									</div>
+									<div class="row">
+										<p>计算结果：</p>
+										<p><textarea name="result" readonly></textarea></p>
+									</div>
+									<div class="intro">
+										<h3>应用场景</h3>
+										<p class="q">外舅公是我妈的谁？</p>
+										<p class="q">我爸应该叫舅老爷什么？</p>
+										<p class="q">我岳父怎么叫我弟弟什么？</p>
+										<p class="q">我哥如何称呼我岳母？</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="script/relationship.js"></script>
+		<script type="text/javascript" src="script/index.js"></script>
+		</script>
+	</body>
+</html>
