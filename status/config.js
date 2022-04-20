@@ -9,6 +9,6 @@ window.Config = {
     CountDays: 45,
     Navi: [{
         text: '回到主页',
-        url: 'https://dh.niufuyu.top/'
+        url: 'https://niufuyu855.github.io/'
     }]
 };
