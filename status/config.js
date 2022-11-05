@@ -1,6 +1,6 @@
 window.Config = {
     SiteName: "Mr. Niu's Status",
-    SiteUrl: 'https://status.niufuyu.top/',
+    SiteUrl: 'https://Niufuyu855.github.io/',
     ApiDomain: 'api.uptimerobot.com',
     ApiKeys: [
         'ur1653018-89f2782006beb859e2e0ccf1', // Mr. Niu小站&Mr. Niu导航
